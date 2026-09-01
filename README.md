@@ -128,11 +128,11 @@
 <div align="center">
   <!-- Generated automatically by GitHub Actions -->
   <img src="./github-metrics.svg" alt="Dynamic Metrics" width="100%" />
+</div>
 
-  <br><br>
-
+  <div>
   <!-- Streak Stats ajustado en proporción y colores -->
-  <img src="https://streak-stats.demolab.com/?user=antonioabadpro&theme=tokyonight&background=0D1117&border=30363D&stroke=38BDF8&ring=38BDF8&fire=38BDF8&currStreakLabel=38BDF8&sideLabels=94A3B8&dates=94A3B8" alt="GitHub Streak" width="520" />
+  <img src="https://streak-stats.demolab.com/?user=antonioabadpro&theme=tokyonight&background=0D1117&border=30363D&stroke=38BDF8&ring=38BDF8&fire=38BDF8&currStreakLabel=38BDF8&sideLabels=94A3B8&dates=94A3B8" alt="GitHub Streak" width="100%" />
 </div>
 
 <br>
