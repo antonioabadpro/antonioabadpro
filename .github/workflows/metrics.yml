@@ -32,15 +32,13 @@ jobs:
           
           # 4. PLUGIN DE ACTIVIDAD Y LÍNEAS DE CÓDIGO
           plugin_lines: yes                        # Calcula líneas añadidas y eliminadas
-          plugin_activity: yes                     # Extrae el historial de eventos
-          plugin_activity_limit: 5                 # Número de eventos recientes en la tarjeta
-          plugin_activity_days: 0                  # 0 = Calcula sobre todo tu historial histórico
-          plugin_activity_filter: all              # Incluye commits, PRs, issues y comentarios
+          plugin_isocalendar: yes                  # Gráfico 3D en perspectiva isométrica
+          plugin_isocalendar_duration: full-year   # Renderizado completo del año
           
           # 5. PLUGIN DE LENGUAJES
           plugin_languages: yes                    # Activa el desglose de lenguajes
-          plugin_languages_details: bytes-size, percentage, lines # Métricas mostradas por lenguaje
-          plugin_languages_limit: 0                # 0 = Muestra todos los lenguajes sin truncar
+          plugin_languages_details: ""             # Formato en barra continua moderna
+          plugin_languages_limit: 8                # Muestra los 8 lenguajes principales en la barra
           plugin_languages_sections: most-used
           
           # 6. PLUGIN DE HÁBITOS Y RÉCORDS (Picos diarios y medias)
@@ -48,7 +46,7 @@ jobs:
           plugin_habits_from: 200                  # Analiza hasta los últimos 200 eventos recientes
           plugin_habits_days: 30                   # Ventana de cálculo para medias diarias
           plugin_habits_facts: yes                 # Muestra estadísticas como "Día con más commits", "Hora más productiva", etc.
-          plugin_habits_charts: yes                # Gráfica de actividad por franja horaria
+          plugin_habits_charts: no                 # Desactivado para eliminar el error rojo y mostrar el bloque resumen limpio
           
           # 7. GUARDADO Y COMMIT AUTOMÁTICO
           output_action: commit                    # Realiza el commit directo en el repositorio
