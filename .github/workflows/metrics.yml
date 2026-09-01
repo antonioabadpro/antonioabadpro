@@ -1,0 +1,53 @@
+name: Generate GitHub Metrics
+
+# 1. DISPARADORES (Triggers)
+on:
+  schedule:
+    # Horario de verano: Todos los días a las 21:50 UTC = 23:50 hora peninsular
+    - cron: "50 21 * 4-10 *" 
+    # Horario de invierno: Todos los días a las 22:50 UTC = 23:50 hora peninsular
+    - cron: "50 22 * 11-3 *"
+  workflow_dispatch:      # Habilita el botón manual "Run workflow" en la pestaña Actions para probarlo sin esperar
+  push:
+    branches: ["main", "master"]    # Se ejecuta también cada vez que hagas push a tu rama principal
+
+# 2. DEFINICIÓN DEL JOB Y PERMISOS
+jobs:
+  github-metrics:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write     # Permite a la acción hacer commit y push del SVG generado en tu repositorio
+    steps:
+      - name: General metrics
+        uses: lowlighter/metrics@latest
+        with:
+          # 3. AUTENTICACIÓN Y CONFIGURACIÓN BASE
+          token: ${{ secrets.METRICS_TOKEN }}      # Lee el secret que acabas de guardar
+          user: antonioabadpro                     # Tu usuario de GitHub
+          template: classic                        # Plantilla base estructurada
+          base: header, activity, community, repositories, metadata
+          config_timezone: Europe/Madrid           # Ajusta los cálculos de actividad diaria a tu zona horaria
+          
+          # 4. PLUGIN DE ACTIVIDAD Y LÍNEAS DE CÓDIGO
+          plugin_lines: yes                        # Calcula líneas añadidas y eliminadas
+          plugin_activity: yes                     # Extrae el historial de eventos
+          plugin_activity_limit: 5                 # Número de eventos recientes en la tarjeta
+          plugin_activity_days: 0                  # 0 = Calcula sobre todo tu historial histórico
+          plugin_activity_filter: all              # Incluye commits, PRs, issues y comentarios
+          
+          # 5. PLUGIN DE LENGUAJES
+          plugin_languages: yes                    # Activa el desglose de lenguajes
+          plugin_languages_details: bytes-size, percentage, lines # Métricas mostradas por lenguaje
+          plugin_languages_limit: 0                # 0 = Muestra todos los lenguajes sin truncar
+          plugin_languages_sections: most-used, recently-used
+          
+          # 6. PLUGIN DE HÁBITOS Y RÉCORDS (Picos diarios y medias)
+          plugin_habits: yes                       # Activa el cálculo de hábitos
+          plugin_habits_from: 200                  # Analiza hasta los últimos 200 eventos recientes
+          plugin_habits_days: 30                   # Ventana de cálculo para medias diarias
+          plugin_habits_facts: yes                 # Muestra estadísticas como "Día con más commits", "Hora más productiva", etc.
+          plugin_habits_charts: yes                # Gráfica de actividad por franja horaria
+          
+          # 7. GUARDADO Y COMMIT AUTOMÁTICO
+          output_action: commit                    # Realiza el commit directo en el repositorio
+          committer_message: "build: update github metrics [skip ci]" # Mensaje de commit (con [skip ci] para evitar bucles infinitos)
