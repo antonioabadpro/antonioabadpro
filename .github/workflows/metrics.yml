@@ -3,10 +3,12 @@ name: Generate GitHub Metrics
 # 1. DISPARADORES (Triggers)
 on:
   schedule:
-    # Horario de verano: Todos los días a las 21:50 UTC = 23:50 hora peninsular
-    - cron: "50 21 * 4-10 *" 
-    # Horario de invierno: Todos los días a las 22:50 UTC = 23:50 hora peninsular
-    - cron: "50 22 * 11-3 *"
+    # Invierno PT1 (Enero a Marzo): 22:50 UTC = 23:50 España
+    - cron: "50 22 * 1-3 *"
+    # Verano (Abril a Octubre): 21:50 UTC = 23:50 España
+    - cron: "50 21 * 4-10 *"
+    # Invierno PT2 (Noviembre y Diciembre): 22:50 UTC = 23:50 España
+    - cron: "50 22 * 11-12 *"
   workflow_dispatch:      # Habilita el botón manual "Run workflow" en la pestaña Actions para probarlo sin esperar
   push:
     branches: ["main", "master"]    # Se ejecuta también cada vez que hagas push a tu rama principal

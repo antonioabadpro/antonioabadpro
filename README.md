@@ -17,7 +17,7 @@
   </p>
 
   <a href="https://antonioabadpro.netlify.app/">
-    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=18&duration=3000&pause=1000&color=38BDF8&center=true&vCenter=true&width=650&lines=Full+Stack+Software+Engineer;Specialised+in+robust+%26+secure+Backend+architectures;Andaluc%C3%ADa+Emprende+2025+Hackathon+Winner" alt="Typing SVG" />
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=18&duration=3000&pause=1000&color=29903b&center=true&vCenter=true&width=650&lines=Full+Stack+Software+Engineer;Specialised+in+robust+%26+secure+Backend+architectures;Andaluc%C3%ADa+Emprende+2025+Hackathon+Winner" alt="Typing SVG" />
   </a>
 
 </div>
