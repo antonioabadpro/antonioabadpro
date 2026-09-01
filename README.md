@@ -126,9 +126,9 @@
 ## 📊 Dynamic Metrics & GitHub Activity
 
 <div align="center">
-<img src="./github-metrics.svg" alt="Dynamic Metrics" width="850" />
-<br><br>
-<img src="https://streak-stats.demolab.com/?user=antonioabadpro&theme=tokyonight&background=0D1117&border=30363D&stroke=38BDF8&ring=38BDF8&fire=38BDF8&currStreakLabel=38BDF8&sideLabels=94A3B8&dates=94A3B8" alt="GitHub Streak" width="520" />
+  <img src="https://github.com/antonioabadpro/antonioabadpro/blob/main/github-metrics.svg" alt="Dynamic Metrics" width="100%">
+  <br><br>
+  <img src="https://streak-stats.demolab.com/?user=antonioabadpro&theme=tokyonight&background=0D1117&border=30363D&stroke=38BDF8&ring=38BDF8&fire=38BDF8&currStreakLabel=38BDF8&sideLabels=94A3B8&dates=94A3B8" alt="GitHub Streak" width="520" />
 </div>
 
 <br>
