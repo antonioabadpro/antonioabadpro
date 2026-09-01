@@ -30,24 +30,23 @@ jobs:
           base: header, activity, community, repositories, metadata
           config_timezone: Europe/Madrid           # Ajusta los cálculos de actividad diaria a tu zona horaria
           
-          # 4. PLUGIN DE ACTIVIDAD Y LÍNEAS DE CÓDIGO
+          # 4. PLUGIN DE LÍNEAS DE CÓDIGO Y ACTIVIDAD
           plugin_lines: yes                        # Calcula líneas añadidas y eliminadas
-          plugin_isocalendar: yes                  # Gráfico 3D en perspectiva isométrica
-          plugin_isocalendar_duration: full-year   # Renderizado completo del año
-          
-          # 5. PLUGIN DE LENGUAJES
+          plugin_activity: no                      # Desactivado para evitar errores de timeline
+
+          # 5. PLUGIN DE LENGUAJES (Barra limpia idéntica a la de referencia)
           plugin_languages: yes                    # Activa el desglose de lenguajes
-          plugin_languages_details: ""             # Formato en barra continua moderna
+          plugin_languages_details: ""             # Vacío para no mostrar la lista de puntos debajo
           plugin_languages_limit: 8                # Muestra los 8 lenguajes principales en la barra
           plugin_languages_sections: most-used
           
-          # 6. PLUGIN DE HÁBITOS Y RÉCORDS (Picos diarios y medias)
-          plugin_habits: yes                       # Activa el cálculo de hábitos
-          plugin_habits_from: 200                  # Analiza hasta los últimos 200 eventos recientes
-          plugin_habits_days: 30                   # Ventana de cálculo para medias diarias
-          plugin_habits_facts: yes                 # Muestra estadísticas como "Día con más commits", "Hora más productiva", etc.
-          plugin_habits_charts: no                 # Desactivado para eliminar el error rojo y mostrar el bloque resumen limpio
+          # 6. ESTRUCTURA 3D + RÉCORDS (Calcula el 3D y las medias/rachas a la derecha)
+          plugin_isocalendar: yes
+          plugin_isocalendar_duration: full-year
           
-          # 7. GUARDADO Y COMMIT AUTOMÁTICO
+          # 7. HÁBITOS INDEPENDIENTES DESACTIVADOS (Elimina el error rojo)
+          plugin_habits: no
+          
+          # 8. GUARDADO Y COMMIT AUTOMÁTICO
           output_action: commit                    # Realiza el commit directo en el repositorio
           committer_message: "build: update github metrics [skip ci]" # Mensaje de commit (con [skip ci] para evitar bucles infinitos)
