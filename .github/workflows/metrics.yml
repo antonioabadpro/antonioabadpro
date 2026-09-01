@@ -41,7 +41,7 @@ jobs:
           plugin_languages: yes                    # Activa el desglose de lenguajes
           plugin_languages_details: bytes-size, percentage, lines # Métricas mostradas por lenguaje
           plugin_languages_limit: 0                # 0 = Muestra todos los lenguajes sin truncar
-          plugin_languages_sections: most-used, recently-used
+          plugin_languages_sections: most-used
           
           # 6. PLUGIN DE HÁBITOS Y RÉCORDS (Picos diarios y medias)
           plugin_habits: yes                       # Activa el cálculo de hábitos
