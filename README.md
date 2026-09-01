@@ -126,22 +126,16 @@
 ## 📊 Dynamic Metrics & GitHub Activity
 
 <div align="center">
-  <div style="max-width: 850px; width: 100%;">
-    <!-- Tarjeta de métricas con proporción nativa y escalado controlado -->
-    <img src="./github-metrics.svg" alt="Dynamic Metrics" style="max-width: 100%; height: auto;" />
-
-    <br><br>
-
-    <!-- Streak Stats perfectamente integrado -->
-    <img src="https://streak-stats.demolab.com/?user=antonioabadpro&theme=tokyonight&background=0D1117&border=30363D&stroke=38BDF8&ring=38BDF8&fire=38BDF8&currStreakLabel=38BDF8&sideLabels=94A3B8&dates=94A3B8" alt="GitHub Streak" width="520" style="max-width: 100%; height: auto;" />
-  </div>
+<img src="./github-metrics.svg" alt="Dynamic Metrics" width="850" />
+<br><br>
+<img src="https://streak-stats.demolab.com/?user=antonioabadpro&theme=tokyonight&background=0D1117&border=30363D&stroke=38BDF8&ring=38BDF8&fire=38BDF8&currStreakLabel=38BDF8&sideLabels=94A3B8&dates=94A3B8" alt="GitHub Streak" width="520" />
 </div>
 
 <br>
 
 <div align="center">
-  <sub>
-    © 2026 • Antonio Abad Hernández Gálvez <br>
-    In constant pursuit of personal and professional growth.
-  </sub>
+<sub>
+© 2026 • Antonio Abad Hernández Gálvez <br>
+In constant pursuit of personal and professional growth.
+</sub>
 </div>
