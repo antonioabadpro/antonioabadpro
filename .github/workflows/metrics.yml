@@ -29,7 +29,7 @@ jobs:
           template: classic                        # Plantilla base estructurada
           base: header, activity, community, repositories, metadata
           config_timezone: Europe/Madrid           # Ajusta los cálculos de actividad diaria a tu zona horaria
-          config_display: large, compact, clean, modern # Muestra la barra limpia y moderna de referencia
+          config_display: large
           
           # 4. PLUGIN DE LÍNEAS DE CÓDIGO Y ACTIVIDAD
           plugin_lines: yes                        # Calcula líneas añadidas y eliminadas
