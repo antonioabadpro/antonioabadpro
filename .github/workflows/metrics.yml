@@ -29,6 +29,7 @@ jobs:
           template: classic                        # Plantilla base estructurada
           base: header, activity, community, repositories, metadata
           config_timezone: Europe/Madrid           # Ajusta los cálculos de actividad diaria a tu zona horaria
+          config_order: base.header, isocalendar, languages, base.activity+community, base.repositories
           
           # 4. PLUGIN DE LÍNEAS DE CÓDIGO Y ACTIVIDAD
           plugin_lines: yes                        # Calcula líneas añadidas y eliminadas
@@ -36,7 +37,7 @@ jobs:
 
           # 5. PLUGIN DE LENGUAJES (Barra limpia idéntica a la de referencia)
           plugin_languages: yes                    # Activa el desglose de lenguajes
-          plugin_languages_details: ""             # Vacío para no mostrar la lista de puntos debajo
+          plugin_languages_details: bytes-size, percentage # Muestra el tamaño en bytes y el porcentaje de cada lenguaje
           plugin_languages_limit: 8                # Muestra los 8 lenguajes principales en la barra
           plugin_languages_sections: most-used
           
